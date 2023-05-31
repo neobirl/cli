@@ -1,12 +1,12 @@
 {
   "name": "birl-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "CLI for Birl and NeoBirl language",
+  "main": "birl-cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run:example": "./birl-cli.js example.birl"
   },
   "keywords": [],
-  "author": "",
+  "author": "iamthepoe",
   "license": "ISC"
 }
