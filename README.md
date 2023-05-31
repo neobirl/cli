@@ -5,6 +5,7 @@
 - [Introdução](#introdução)
 - [Como Funciona](#como-funciona)
 - [Executando o Projeto](#executando-o-projeto)
+- [ToDo](#todo)
 - [Contribuidores](#contribuidores)
 
 
@@ -51,6 +52,11 @@ $ npm run hello:world
 #Executará o comando './birl-cli.js ./example.birl ""
 Hello, Mutante!
 ```
+
+## ToDo
+
+- [ ] Fazer essa bagaça rodar no Windows;
+- [ ] Escrever testes.
 
 ## Contribuidores
 
