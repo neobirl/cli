@@ -4,7 +4,7 @@
   "description": "CLI for Birl and NeoBirl language",
   "main": "birl-cli.js",
   "scripts": {
-    "run:example": "./birl-cli.js example.birl"
+    "hello:world": "./birl-cli.js ./example.birl ''"
   },
   "keywords": [],
   "author": "iamthepoe",
