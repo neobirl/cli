@@ -54,6 +54,6 @@ Hello, Mutante!
 
 ## Contribuidores
 
-Caso queira contribuir, é só abrir um PR bonitinho e escrever os testes antes.
+Caso queira contribuir, é só abrir um PR bonitinho. <b>Mas faça suas alterações antes no código do <a href="https://github.com/neobirl/server">servidor.</a></b>
 
 
