@@ -62,4 +62,4 @@ Hello, Mutante!
 
 Caso queira contribuir, é só abrir um PR bonitinho. <b>Mas faça suas alterações antes no código do <a href="https://github.com/neobirl/server">servidor.</a></b>
 
-
+<h4>Nosso sincero obrigado a @lcfpadilha, @akafts e toda a comunidade codebuilder do Brasil.</h4>
