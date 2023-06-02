@@ -177,8 +177,6 @@ class BirlClient {
 
 	async compile(file) {
 		try {
-			const compileCommand = `gcc ${file}.c -o ${file}.exe && .\\${file}.exe < ${file}.txt`;
-
 			return new Promise((resolve) => {
 				exec(compileCommand, (error, stdout, stderr) => {
 					if (error) {
@@ -195,7 +193,6 @@ class BirlClient {
 						resolve(res);
 					}
 				}).on('close', () => {
-					const removeCommand = `del "${file}.*"`;
 					exec(removeCommand, (error) => {
 						if (error) {
 							console.log(error);
