@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const BirlClient = require('./client/BirlClient.js');
+import fs from 'fs';
+import { BirlClient } from './client/BirlClient.js';
 const birl = new BirlClient();
 
 const birlFilePath = process.argv[2];

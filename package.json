@@ -6,6 +6,7 @@
   "scripts": {
     "hello:world": "./birl-cli.js ./example.birl ''"
   },
+  "type": "module",
   "keywords": [],
   "author": "iamthepoe",
   "license": "ISC"

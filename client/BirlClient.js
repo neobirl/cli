@@ -1,6 +1,6 @@
-const { exec } = require('child_process');
-const fs = require('fs');
-import { unixCommands, windowsCommands } from './TerminalCommands';
+import { exec } from 'child_process';
+import fs from 'fs';
+import { unixCommands, windowsCommands } from './TerminalCommands.js';
 
 switch (process.platform) {
 	case 'win32':
@@ -12,7 +12,7 @@ switch (process.platform) {
 		break;
 }
 
-class BirlClient {
+export class BirlClient {
 	printCode(code) {
 		console.log('-----------------------------------------');
 		console.log('CODIGO GERADO:');
@@ -229,5 +229,3 @@ class BirlClient {
 		}
 	}
 }
-
-module.exports = BirlClient;
