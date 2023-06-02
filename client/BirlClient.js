@@ -1,5 +1,6 @@
 const { exec } = require('child_process');
 const fs = require('fs');
+import { unixCommands, windowsCommands } from './TerminalCommands';
 
 class BirlClient {
 	printCode(code) {
