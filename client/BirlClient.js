@@ -2,6 +2,16 @@ const { exec } = require('child_process');
 const fs = require('fs');
 import { unixCommands, windowsCommands } from './TerminalCommands';
 
+switch (process.platform) {
+	case 'win32':
+		var { compileCommand, removeCommand } = windowsCommands;
+		break;
+
+	default:
+		var { compileCommand, removeCommand } = unixCommands;
+		break;
+}
+
 class BirlClient {
 	printCode(code) {
 		console.log('-----------------------------------------');
