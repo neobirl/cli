@@ -5,4 +5,5 @@ const windowsCommands = {
 
 const unixCommands = {
 	compileCommand: `gcc ${file}.c -o ${file} -lm && timeout 2s ./${file} < ${file}.txt`,
+	removeCommand: 'rm ' + file + '*',
 };
