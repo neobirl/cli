@@ -166,17 +166,17 @@ class BirlClient {
 
 	async compile(file) {
 		try {
-			const compileCommand = `gcc ${file}.c -o ${file}.exe; if ($?) { .\\${file}.exe < ${file}.txt }`;
+			const compileCommand = `gcc ${file}.c -o ${file}.exe && .\\${file}.exe < ${file}.txt`;
 
 			return new Promise((resolve) => {
-				exec(compileCommand, (error, stdout) => {
+				exec(compileCommand, (error, stdout, stderr) => {
 					if (error) {
+						console.log(error);
 						const res = {
 							code: 500,
-							error: 'CODEI PRA CARALHO MAS NÃO COMPILOU!\n',
+							error: 'ERRO AO COMPILAR O CÓDIGO',
 							stdout: null,
 						};
-
 						resolve(res);
 					} else {
 						console.log('\n' + stdout);
@@ -184,13 +184,18 @@ class BirlClient {
 						resolve(res);
 					}
 				}).on('close', () => {
-					exec('Remove-Item -Path "${file}* ' + file + '*', () => {});
+					const removeCommand = `del "${file}.*"`;
+					exec(removeCommand, (error) => {
+						if (error) {
+							console.log(error);
+						}
+					});
 				});
 			});
 		} catch (error) {
 			const res = {
 				code: 500,
-				error: 'TENTEI RODAR MAS NÃO VAI DAR NÃO',
+				error: 'ERRO AO EXECUTAR O COMPILADOR',
 				stdout: null,
 			};
 			return res;
