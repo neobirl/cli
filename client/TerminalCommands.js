@@ -18,4 +18,4 @@ const commandsFactory = (file, plataform = process.platform) => {
 	}
 };
 
-export { windowsCommands, unixCommands, commandsFactory };
+export { commandsFactory };
