@@ -1,16 +1,6 @@
 import { exec } from 'child_process';
 import fs from 'fs';
-import { unixCommands, windowsCommands } from './TerminalCommands.js';
-
-switch (process.platform) {
-	case 'win32':
-		var { compileCommand, removeCommand } = windowsCommands;
-		break;
-
-	default:
-		var { compileCommand, removeCommand } = unixCommands;
-		break;
-}
+import { commandsFactory } from './TerminalCommands.js';
 
 export class BirlClient {
 	printCode(code) {
@@ -176,6 +166,7 @@ export class BirlClient {
 	}
 
 	async compile(file) {
+		const { compileCommand, removeCommand } = commandsFactory(file);
 		try {
 			return new Promise((resolve) => {
 				exec(compileCommand, (error, stdout, stderr) => {
