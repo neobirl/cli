@@ -55,7 +55,7 @@ Hello, Mutante!
 
 ## ToDo
 
-- [ ] Fazer essa bagaça rodar no Windows;
+- [x] Fazer essa bagaça rodar no Windows;
 - [ ] Escrever testes.
 
 ## Contribuidores
