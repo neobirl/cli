@@ -3,13 +3,6 @@ import fs from 'fs';
 import { commandsFactory } from './TerminalCommands.js';
 
 export class BirlClient {
-	printCode(code) {
-		console.log('-----------------------------------------');
-		console.log('CODIGO GERADO:');
-		console.log(code);
-		console.log('-----------------------------------------');
-	}
-
 	async writeFile(fileName, content) {
 		return new Promise((resolve, reject) => {
 			fs.writeFile(fileName, content, (error) => {
