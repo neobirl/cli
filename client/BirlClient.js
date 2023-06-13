@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
-import { commandsFactory } from './TerminalCommands.js';
-import { writeFile } from './utils/writeFile.js';
+import { commandsFactory } from './functions/commandsFactory.js';
+import { writeFile } from './functions/writeFile.js';
 
 export class BirlClient {
 	convertToC(birlCode) {
