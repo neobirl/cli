@@ -1,17 +1,7 @@
 import { exec } from 'child_process';
-import fs from 'fs';
 import { commandsFactory } from './TerminalCommands.js';
 
 export class BirlClient {
-	async writeFile(fileName, content) {
-		return new Promise((resolve, reject) => {
-			fs.writeFile(fileName, content, (error) => {
-				if (error) reject('ERRO INTERNO PAI!\n');
-				else resolve();
-			});
-		});
-	}
-
 	convertToC(birlCode) {
 		if (!birlCode) return '';
 
