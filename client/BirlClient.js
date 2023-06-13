@@ -1,5 +1,6 @@
 import { exec } from 'child_process';
 import { commandsFactory } from './TerminalCommands.js';
+import { writeFile } from './utils/writeFile.js';
 
 export class BirlClient {
 	convertToC(birlCode) {
@@ -188,8 +189,8 @@ export class BirlClient {
 		try {
 			const code = this.convertToC(birlCode);
 			const fileName = 'birl-' + Date.now();
-			await this.writeFile(`${fileName}.txt`, stdin);
-			await this.writeFile(`${fileName}.c`, code);
+			await writeFile(`${fileName}.txt`, stdin);
+			await writeFile(`${fileName}.c`, code);
 			return this.compile(fileName);
 		} catch (e) {
 			console.log(e);
