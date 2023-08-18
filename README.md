@@ -89,7 +89,8 @@ Hello, Mutante!
 ## ToDo
 - [x] Remover Herobrine;
 - [ ] Criar scripts de instalação; 
-- [ ] Escrever tutoriais para o Windows e MacOS; 
+- [ ] Escrever tutoriais para o Windows e MacOS;
+- [ ] Adicionar JSDoc;
 - [ ] Afastar completamente BIRL da linguagem de quem sobe em árvore (vide C).
 
 ## Contribuidores
