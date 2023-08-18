@@ -27,7 +27,8 @@ describe("Compiler", () => {
       const result = await compiler.compile();
       assert.ok(result);
     } catch (error) {
-      assert.fail(JSON.stringify(error));
+      console.log(error);
+      assert.fail("Compilation failed.");
     }
   });
 
