@@ -1,10 +1,16 @@
-# CLI da NeoBIRL
+
+# NeoBIRL
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/neobirl/docs/main/assets/birl-logo.png" width=250/>
+</div>
 
 ## 📋 Índice
 
 - [Introdução](#introdução)
 - [Como Funciona](#como-funciona)
 - [Executando o Projeto](#executando-o-projeto)
+	- [Linux](#linux)
 - [ToDo](#todo)
 - [Contribuidores](#contribuidores)
 
@@ -17,7 +23,7 @@ NeoBIRL (Neo-<b>B</b>ambam's "<b>I</b>t's show time" <b>R</b>ecursive <b>L</b>an
 
 Primeiramente, executamos a CLI com os argumentos:
 - O arquivo (Neo)BIRL;
-- Os valores de ENTRADA.
+- Os valores de ENTRADA (caso haja algum).
 
 ```C
 /*codigo.birl*/
@@ -29,37 +35,64 @@ BIRL
 ```
 
 ```bash
-$ ./birl-cli.js codigo.birl "algumvalor"
+$ ./cli.js codigo.birl
 ```
 
 O código é traduzido para C por meio de uma função de expressões regulares e, após isso, compilado e executado. 
-
 ```
 SAÍDA:
 
 Hello, Mutante!
 ```
+Caso haja algum valor de entrada, podemos executar da seguinte maneira:
+```C
+/* codigo.birl */
+HORA DO SHOW
+    MONSTRO X;
+    QUE QUE CE QUER MONSTRAO? ("%d", &X);
+    CE QUER VER ESSA PORRA?("%d", X*2);
+    BORA CUMPADE 0;
+BIRL
+```
+```bash
+# ./cli.js <codigo> <valor de entrada>
+$ ./cli.js codigo.birl 2
+
+# SAÍDA:
+
+4
+```
+
+
 
 ## Executando o Projeto
+### Linux
 
-1. <b>Esteja em um ambiente Unix</b> (MacOS/Linux), a função "exec" executará comandos para ambientes de Unix. Caso esteja usando Windows, se vire e vá instalar um Linux da vida ou modifique o código para que ele rode no Windows. 
-2. Tenha o Node.js e o <b>GCC</b> instalados.
 ```bash 
+# Clone o repositório
 $ git clone https://github.com/neobirl/cli && cd cli
-$ chmod +x birl-cli.js
-$ npm run hello:world
 
-#Executará o comando './birl-cli.js ./example.birl ""
+# Conceda as permissões
+$ chmod +x cli.js
+
+# Crie um alias
+$ alias birl="./cli.js"
+
+#BIRL
+$ birl example.birl
+
+# Saída:
 Hello, Mutante!
 ```
 
 ## ToDo
-
-- [x] Fazer essa bagaça rodar no Windows;
-- [ ] Escrever testes.
+- [x] Remover Herobrine;
+- [ ] Criar scripts de instalação; 
+- [ ] Escrever tutoriais para o Windows e MacOS; 
+- [ ] Afastar completamente BIRL da linguagem de quem sobe em árvore (vide C).
 
 ## Contribuidores
 
-Caso queira contribuir, é só abrir um PR bonitinho. <b>Mas faça suas alterações antes no código do <a href="https://github.com/neobirl/server">servidor.</a></b>
+Caso queira contribuir, é só abrir um PR bonitinho.
 
 <h4>Nosso sincero obrigado a @lcfpadilha, @akafts e toda a comunidade codebuilder do Brasil.</h4>
