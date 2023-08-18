@@ -77,7 +77,7 @@ $ git clone https://github.com/neobirl/cli && cd cli
 $ chmod +x cli.js
 
 # Crie um alias
-$ alias birl="./cli.js"
+$ alias birl="`pwd`/cli.js"
 
 #BIRL
 $ birl example.birl
