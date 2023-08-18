@@ -20,13 +20,13 @@ describe("Compiler", () => {
       if (err) console.log(err);
     });
   });
+
   it("should compile successfully", async () => {
     const compiler = new Compiler(filePath);
     try {
       const result = await compiler.compile();
       assert.ok(result);
     } catch (error) {
-      console.log(error);
       assert.fail(JSON.stringify(error));
     }
   });

@@ -26,7 +26,7 @@ export class Compiler {
 
           console.log("\n" + stdout);
 
-          resolve(stdout);
+          resolve({ stdout, error: null });
         }).on("close", () => {
           exec(removeCommand, (error) => {
             if (error) console.error(error);
