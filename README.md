@@ -66,7 +66,8 @@ $ ./cli.js codigo.birl 2
 
 
 ## Executando o Projeto
-### Linux
+### Antes de tudo, é necessário que se tenha instalado o <a href="https://nodejs.org/" target="_blank">Node.js</a> e o <a href="https://gcc.gnu.org/" target="_blank">GCC</a>.
+#### Linux
 
 ```bash 
 # Clone o repositório
