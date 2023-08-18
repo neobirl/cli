@@ -4,7 +4,8 @@
   "description": "CLI for Birl and NeoBirl language",
   "main": "birl-cli.js",
   "scripts": {
-    "hello:world": "./birl-cli.js ./example.birl ''"
+    "hello:world": "./cli.js ./example.birl",
+    "test": "node --test src/**/__tests__/*.test.js"
   },
   "type": "module",
   "keywords": [],
